@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SunuAI — L'intelligence artificielle au service de l'Afrique</title>
+  <meta name="description" content="SunuAI, votre assistant intelligent pour apprendre, créer, travailler et entreprendre.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container nav">
+      <a class="logo" href="#"><span class="logo-mark">S</span> Sunu<span>AI</span></a>
+      <nav>
+        <a href="#fonctionnalites">Fonctionnalités</a>
+        <a href="#a-propos">À propos</a>
+        <a href="#tarifs">Tarifs</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="lang">FR ▾</button>
+        <a class="btn btn-outline" href="#chat">Se connecter</a>
+      </div>
+      <button class="menu" aria-label="Menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="badge">🇸🇳 Pensé pour l'Afrique</div>
+          <h1>L'intelligence artificielle <span>au service de l'Afrique.</span></h1>
+          <p>SunuAI vous aide à apprendre, créer, travailler et développer vos projets avec une intelligence artificielle simple et accessible.</p>
+          <div class="hero-buttons">
+            <a class="btn btn-primary" href="#chat">Commencer gratuitement →</a>
+            <a class="btn btn-light" href="#fonctionnalites">Découvrir SunuAI</a>
+          </div>
+          <div class="trust"><span>✓</span> Français &nbsp; • &nbsp; Wolof &nbsp; • &nbsp; Arabe &nbsp; • &nbsp; et plus</div>
+        </div>
+
+        <div class="chat-card" id="chat">
+          <div class="chat-top">
+            <div class="ai-avatar">✦</div>
+            <div><strong>SunuAI</strong><small>Assistant intelligent</small></div>
+            <div class="online">●</div>
+          </div>
+          <div class="chat-body">
+            <div class="bubble ai">Bonjour 👋🏽 Je suis SunuAI. Que puis-je faire pour vous aujourd'hui ?</div>
+            <div class="examples">
+              <button onclick="fillPrompt('Explique-moi cette leçon simplement')">📚 Expliquer une leçon</button>
+              <button onclick="fillPrompt('Donne-moi une idée de business au Sénégal')">💼 Idée de business</button>
+              <button onclick="fillPrompt('Aide-moi à créer mon CV')">📄 Créer un CV</button>
+              <button onclick="fillPrompt('Traduis ce texte en wolof')">🌍 Traduire en wolof</button>
+            </div>
+            <div class="bubble user" id="demoUser" hidden></div>
+            <div class="bubble ai" id="demoAnswer" hidden></div>
+          </div>
+          <form class="chat-input" onsubmit="demoChat(event)">
+            <input id="prompt" autocomplete="off" placeholder="Posez votre question à SunuAI…">
+            <button type="submit">➤</button>
+          </form>
+          <p class="demo-note">Prototype de démonstration — connexion à un moteur IA à ajouter.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="fonctionnalites">
+      <div class="container">
+        <div class="section-head">
+          <div class="badge">Ce que SunuAI peut faire</div>
+          <h2>Un assistant pour vos besoins quotidiens</h2>
+          <p>Une expérience pensée pour les étudiants, enseignants, créateurs, entrepreneurs et professionnels.</p>
+        </div>
+        <div class="features">
+          <article><div class="icon">📚</div><h3>Éducation</h3><p>Comprendre les cours, réviser, faire des exercices et apprendre plus facilement.</p></article>
+          <article><div class="icon">💼</div><h3>Entrepreneuriat</h3><p>Idées de projets, plans, marketing, contenus et outils pour développer votre activité.</p></article>
+          <article><div class="icon">📄</div><h3>Documents</h3><p>CV, lettres, rapports, textes professionnels et documents personnalisés.</p></article>
+          <article><div class="icon">🌍</div><h3>Langues</h3><p>Français, Wolof, Arabe et accompagnement multilingue.</p></article>
+          <article><div class="icon">✨</div><h3>Création</h3><p>Idées, scripts, publications, descriptions et contenus pour les créateurs.</p></article>
+          <article><div class="icon">🤖</div><h3>Assistant IA</h3><p>Posez vos questions naturellement et obtenez une aide claire et structurée.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="a-propos">
+      <div class="container about-grid">
+        <div>
+          <div class="badge">Notre vision</div>
+          <h2>Une IA proche des réalités africaines.</h2>
+          <p>SunuAI veut rendre l'intelligence artificielle plus simple, plus accessible et plus utile aux utilisateurs d'Afrique.</p>
+          <ul>
+            <li>🌍 Pensé pour les besoins locaux</li>
+            <li>🗣️ Multilingue et accessible</li>
+            <li>🚀 Orienté éducation et entrepreneuriat</li>
+          </ul>
+        </div>
+        <div class="vision-card">
+          <div class="orb">✦</div>
+          <h3>SunuAI</h3>
+          <p>Apprendre. Créer. Entreprendre.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="pricing" id="tarifs">
+      <div class="container">
+        <div class="section-head">
+          <div class="badge">Tarifs</div>
+          <h2>Commencez simplement</h2>
+          <p>Les offres pourront être configurées lorsque la plateforme IA sera connectée.</p>
+        </div>
+        <div class="price-card">
+          <h3>Découverte</h3>
+          <div class="price">Gratuit</div>
+          <p>Découvrez les fonctions essentielles de SunuAI.</p>
+          <a class="btn btn-primary" href="#chat">Essayer SunuAI</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div><a class="logo" href="#"><span class="logo-mark">S</span> Sunu<span>AI</span></a><p>L'intelligence artificielle au service de l'Afrique.</p></div>
+      <div><strong>SunuAI</strong><a href="#fonctionnalites">Fonctionnalités</a><a href="#a-propos">À propos</a><a href="#tarifs">Tarifs</a></div>
+      <div><strong>Contact</strong><span>Support SunuAI</span><span>© 2026 SunuAI</span></div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
